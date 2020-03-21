@@ -15,3 +15,5 @@ def hospital_list(request, lat=0, lon=0):
 
 def home(request):
     return render(request, template_name='hospitals/index.html')
+
+
