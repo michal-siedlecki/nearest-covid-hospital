@@ -2,7 +2,7 @@
 **/.idea/
 .idea/
 # privacy reasons (api private key)
-/data_preprocess
+data_preprocess/
 /data_preprocess/GET_LON_LAT.ipynb
 # Byte-compiled / optimized / DLL files
 __pycache__/
