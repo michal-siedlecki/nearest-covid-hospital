@@ -19,8 +19,9 @@
     <div class="card mx-auto mt-3 mb-3 shadow-sm">
       <div class="card-body">
         <h5 class="card-title">{{ hospital.name }}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{ hospital.distance }}</h6>
-        <p class="card-text">{{ hospital.name }}</p>
+        <h6 class="card-subtitle mb-2 text-muted">{{ hospital.distance.km | floatformat:3 }}</h6>
+        <p class="card-text">{{ hospital.address }}</p>
+        <button class="btn btn-success"><p class="card-text">{{ hospital.phone }}</p></button>
       </div>
     </div>
 
