@@ -10,6 +10,7 @@ def hospital_list(request, lat=0, lon=0):
     user_location = Point(lon, lat, srid=4326)
     context = dict()
     context['hospitals'] = Hospital.objects.annotate(distance=Distance('location', user_location)).order_by('distance')[:4]
+
     return render(request, 'hospitals/hospitals.html', context)
 
 

@@ -21,7 +21,10 @@
         <h5 class="card-title">{{ hospital.name }}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{ hospital.distance.km | floatformat:3 }}</h6>
         <p class="card-text">{{ hospital.address }}</p>
-        <button class="btn btn-success"><p class="card-text">{{ hospital.phone }}</p></button>
+        <p class="card-text">{{ hospital.point_type }}</p>
+        {% for phone in hospital.phones_as_list %}
+          <button class="btn btn-success"><p class="card-text">{{ phone }}</p></button>
+        {% endfor %}
       </div>
     </div>
 
