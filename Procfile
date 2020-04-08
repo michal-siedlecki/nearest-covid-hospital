@@ -1,1 +1,1 @@
-web: gunicorn nearest_hospital.wsgi
+web: gunicorn nearest.wsgi
