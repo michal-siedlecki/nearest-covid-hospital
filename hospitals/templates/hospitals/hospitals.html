@@ -8,20 +8,40 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+
     <title>Nearest-hospital</title>
   </head>
-  <body>
+  <body style="
+background:
+radial-gradient(transparent 20%, white 20%, white 80%, transparent 80%, transparent),
+radial-gradient(transparent 20%, white 20%, white 80%, transparent 80%, transparent) 50px 50px,
+linear-gradient(#ffd9e0 8px, transparent 8px) 0 -4px,
+linear-gradient(90deg, #ffd9e0 8px, transparent 8px) -4px 0;
+background-color: white;
+background-size:100px 100px, 100px 100px, 50px 50px, 50px 50px;
+">
+
   <div class="m-5">
-      <h1 class="text-center">Szpitale COVID-19 w Twojej okolicy</h1>
+    <div class="card">
+      <h5 class="text-center m-3"><strong>Szpitale COVID-19 w Twojej okolicy</strong></h5>
+    </div>
 
     {% for hospital in hospitals %}
 
     <div class="card mx-auto mt-3 mb-3 shadow-sm">
+      <div class="card-header">
+        <p class="card-title">{{ hospital.name }}</p>
+      </div>
       <div class="card-body">
-        <h5 class="card-title">{{ hospital.name }}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{ hospital.distance.km | floatformat:3 }}</h6>
-        <p class="card-text">{{ hospital.address }}</p>
-        <p class="card-text">{{ hospital.point_type }}</p>
+        <p class="card-subtitle">
+          <strong>ADRES:</strong> {{ hospital.address }} <br>
+          <strong>RODZAJ PUNKTU:</strong> {{ hospital.point_type }} <br>
+          <strong>ODLEGŁOŚĆ:</strong> {{ hospital.distance.km | floatformat:2 }} km
+        </p>
+      </div>
+      <div class="card-footer">
+        <span class="glyphicon glyphicon-phone"></span>
+        <strong>TELEFON:</strong>
         {% for phone in hospital.phones_as_list %}
           <button class="btn btn-success"><p class="card-text">{{ phone }}</p></button>
         {% endfor %}
