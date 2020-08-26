@@ -1,6 +1,6 @@
 # Nearest COVID-19 hospital finder
 
-Application finds COVID-19 hospital closest to You based on Your geolocalization. Database covers hospitals in Poland.
+Application finds COVID-19 hospital closest to You based on Your geolocation. Database covers hospitals in Poland.
 
 ![sample](/img/ex1.jpg)
 ---------------
