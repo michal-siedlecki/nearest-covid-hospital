@@ -3,7 +3,9 @@
 Application finds COVID-19 hospital closest to You based on Your geolocation. Database covers hospitals in Poland.
 
 ![sample](/img/vid.gif)
-
+---
+### Demo app is hosted on Heroku
+![LINK](https://szpitale-covid.herokuapp.com/)
 
 ## Getting Started
 
